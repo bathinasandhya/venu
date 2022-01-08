@@ -1,0 +1,210 @@
+root@DESKTOP-VS7O4OL:~# echo $SHELL
+/bin/bash
+root@DESKTOP-VS7O4OL:~# #!/bin/bash
+root@DESKTOP-VS7O4OL:~# echo hello word
+hello word
+root@DESKTOP-VS7O4OL:~# nano
+root@DESKTOP-VS7O4OL:~# cat shell.sh
+welcome to shell scripting
+
+root@DESKTOP-VS7O4OL:~# ls -l
+total 168
+drwxr-xr-x 2 root root 4096 Jan  5 16:28  1.core
+drwxr-xr-x 2 root root 4096 Jan  5 16:28  Linux
+drwxr-xr-x 3 root root 4096 Dec 17 12:35  abcimplex
+drwxr-xr-x 2 root root 4096 Dec 17 13:22  abcimplex1
+drwxr-xr-x 3 root root 4096 Dec 17 15:35  abcinflex
+-rwxrwxr-- 1 root root   99 Dec 20 12:00  args.sh
+-rwxrwxr-- 1 root root   91 Dec 20 14:41  args.txt
+drwxr-xr-x 2 root root 4096 Dec  1 22:12  bathina
+drwxr-xr-x 2 root root 4096 Dec 20 14:32  bootcamp
+-rwxrwxr-- 1 root root  131 Dec 13 17:41  demo.sh
+-rw-r--r-- 1 root root  119 Dec 13 17:45 'demo1.sh '
+-rwxr-xr-x 1 root root  135 Dec 13 14:10  frnds.sh
+-rwxr-xr-x 1 root root  259 Dec 13 13:55  fruit.sh
+drwxr-xr-x 3 root root 4096 Dec  1 21:51  gowri
+drwxr-xr-x 2 root root 4096 Jan  5 16:29  hashmum
+-rwxrwxr-- 1 root root  410 Dec 13 10:47  helloscript.sh
+-rwxrwxr-- 1 root root  165 Dec 20 12:48  ifelse.sh
+drwxr-xr-x 2 root root 4096 Dec 17 13:05  initialgalaxy
+drwxr-xr-x 2 root root 4096 Dec 28 17:29  initialzing
+-rwxrwxr-- 1 root root  108 Dec 20 14:53  input.txt
+drwxr-xr-x 2 root root 4096 Jan  5 16:28  is
+drwxr-xr-x 2 root root 4096 Dec  7 15:31  madhuri
+-rwxr-xr-x 1 root root   96 Dec 13 14:57  multiple.sh
+-rwxr-xr-x 1 root root   74 Dec 10 12:21  mycommands.sh
+-rwxrwxr-- 1 root root  151 Dec 13 13:06  mydata.sh
+-rwxr-xr-x 1 root root  127 Dec 10 14:34  myfilewithvars.sh
+-rw-r--rwx 1 root root   22 Dec 10 10:02  myinfo.txt
+-rwxr-xr-x 1 root root   96 Dec 13 14:30  odd.sh
+-rwxr-xr-x 1 root root  166 Dec 13 13:44  oddeven.sh
+drwxr-xr-x 2 root root 4096 Jan  5 16:28  of
+drwxr-xr-x 2 root root 4096 Jan  5 16:28  operating
+drwxr-xr-x 3 root root 4096 Dec  1 14:46  parentfld
+-rwxr-xr-x 1 root root   90 Dec 13 13:10  readdata.sh
+-rwxrwxr-- 1 root root  116 Dec 10 16:07  readfile.sh
+drwxr-xr-x 3 root root 4096 Jan  7 17:42  sambi
+drwxr-xr-x 4 root root 4096 Dec  1 22:36  sandhya
+-rw-r--r-- 1 root root    0 Dec 10 12:22  sandhya.sh
+drwxr-xr-x 3 root root 4096 Dec  1 17:34  sandy
+-rw-r--r-- 1 root root   28 Jan  8 12:01  shell.sh
+-rw-r--r-- 1 root root   77 Dec  2 20:41  suguna.txt
+-rwxrwxr-- 1 root root    0 Dec 20 14:24  sunny.txt
+drwxr-xr-x 2 root root 4096 Jan  5 16:28  system
+drwxr-xr-x 3 root root 4096 Dec 20 14:34  temp
+-rw-r--r-- 1 root root    0 Dec 20 14:25  yashi.txt
+drwxr-xr-x 2 root root 4096 Dec 28 16:54  zing
+root@DESKTOP-VS7O4OL:~# nano
+root@DESKTOP-VS7O4OL:~# ./nanos.txt
+-bash: ./nanos.txt: Permission denied
+root@DESKTOP-VS7O4OL:~# chmod 774 nanos.txt
+root@DESKTOP-VS7O4OL:~# ./nanos.txt
+welcome to shellscript
+ 1.core       args.sh   'demo1.sh '   helloscript.sh   is              myfilewithvars.sh   of            sambi        suguna.txt   zing
+ Linux        args.txt   frnds.sh     ifelse.sh        madhuri         myinfo.txt          operating     sandhya      sunny.txt
+ abcimplex    bathina    fruit.sh     initialgalaxy    multiple.sh     nanos.txt           parentfld     sandhya.sh   system
+ abcimplex1   bootcamp   gowri        initialzing      mycommands.sh   odd.sh              readdata.sh   sandy        temp
+ abcinflex    demo.sh    hashmum      input.txt        mydata.sh       oddeven.sh          readfile.sh   shell.sh     yashi.txt
+the list of directories
+./nanos.txt: line 5: sandhya: command not found
+./nanos.txt: line 6: nellore: command not found
+
+root@DESKTOP-VS7O4OL:~# nano simplefile.sh
+root@DESKTOP-VS7O4OL:~# chmod 774 simplefile.sh
+root@DESKTOP-VS7O4OL:~# chmod 774 simplefile.shsimplefile.sh
+chmod: cannot access 'simplefile.shsimplefile.sh': No such file or directory
+root@DESKTOP-VS7O4OL:~# chmod 774 simplefile.sh
+root@DESKTOP-VS7O4OL:~# ./simplefile.sh
+what is your name :
+sandhya
+what is your location :
+kerala
+what is your state
+AP
+root@DESKTOP-VS7O4OL:~# cat simplefile.sh
+#!/bin/bash
+echo what is your name :
+read name
+echo what is your location :
+read location
+echo what is your state
+read state
+root@DESKTOP-VS7O4OL:~# ls -l simplefile.sh
+-rwxrwxr-- 1 root root 125 Jan  8 12:24 simplefile.sh
+root@DESKTOP-VS7O4OL:~# apt list --upgradable
+Listing... Done
+accountsservice/focal-updates,focal-security 0.6.55-0ubuntu12~20.04.5 amd64 [upgradable from: 0.6.55-0ubuntu12~20.04.4]
+alsa-ucm-conf/focal-updates 1.2.2-1ubuntu0.11 all [upgradable from: 1.2.2-1ubuntu0.9]
+apport/focal-updates,focal-security 2.20.11-0ubuntu27.21 all [upgradable from: 2.20.11-0ubuntu27.18]
+bind9-dnsutils/focal-updates,focal-security 1:9.16.1-0ubuntu2.9 amd64 [upgradable from: 1:9.16.1-0ubuntu2.8]
+bind9-host/focal-updates,focal-security 1:9.16.1-0ubuntu2.9 amd64 [upgradable from: 1:9.16.1-0ubuntu2.8]
+bind9-libs/focal-updates,focal-security 1:9.16.1-0ubuntu2.9 amd64 [upgradable from: 1:9.16.1-0ubuntu2.8]
+busybox-initramfs/focal-updates,focal-security 1:1.30.1-4ubuntu6.4 amd64 [upgradable from: 1:1.30.1-4ubuntu6.3]
+busybox-static/focal-updates,focal-security 1:1.30.1-4ubuntu6.4 amd64 [upgradable from: 1:1.30.1-4ubuntu6.3]
+ca-certificates/focal-updates,focal-security 20210119~20.04.2 all [upgradable from: 20210119~20.04.1]
+cloud-init/focal-updates 21.4-0ubuntu1~20.04.1 all [upgradable from: 21.2-3-g899bfaa9-0ubuntu2~20.04.1]
+cloud-initramfs-copymods/focal-updates 0.45ubuntu2 all [upgradable from: 0.45ubuntu1]
+cloud-initramfs-dyn-netconf/focal-updates 0.45ubuntu2 all [upgradable from: 0.45ubuntu1]
+cpio/focal-updates,focal-security 2.13+dfsg-2ubuntu0.3 amd64 [upgradable from: 2.13+dfsg-2]
+curl/focal-updates,focal-security 7.68.0-1ubuntu2.7 amd64 [upgradable from: 7.68.0-1ubuntu2.6]
+distro-info-data/focal-updates,focal-security 0.43ubuntu1.9 all [upgradable from: 0.43ubuntu1.6]
+git-man/focal-updates,focal-security 1:2.25.1-1ubuntu3.2 all [upgradable from: 1:2.25.1-1ubuntu3.1]
+git/focal-updates,focal-security 1:2.25.1-1ubuntu3.2 amd64 [upgradable from: 1:2.25.1-1ubuntu3.1]
+libaccountsservice0/focal-updates,focal-security 0.6.55-0ubuntu12~20.04.5 amd64 [upgradable from: 0.6.55-0ubuntu12~20.04.4]
+libasound2-data/focal-updates 1.2.2-2.1ubuntu2.5 all [upgradable from: 1.2.2-2.1ubuntu2.4]
+libasound2/focal-updates 1.2.2-2.1ubuntu2.5 amd64 [upgradable from: 1.2.2-2.1ubuntu2.4]
+libcurl3-gnutls/focal-updates,focal-security 7.68.0-1ubuntu2.7 amd64 [upgradable from: 7.68.0-1ubuntu2.6]
+libcurl4/focal-updates,focal-security 7.68.0-1ubuntu2.7 amd64 [upgradable from: 7.68.0-1ubuntu2.6]
+libdrm-amdgpu1/focal-updates 2.4.105-3~20.04.2 amd64 [upgradable from: 2.4.105-3~20.04.1]
+libdrm-common/focal-updates 2.4.105-3~20.04.2 all [upgradable from: 2.4.105-3~20.04.1]
+libdrm-intel1/focal-updates 2.4.105-3~20.04.2 amd64 [upgradable from: 2.4.105-3~20.04.1]
+libdrm-nouveau2/focal-updates 2.4.105-3~20.04.2 amd64 [upgradable from: 2.4.105-3~20.04.1]
+libdrm-radeon1/focal-updates 2.4.105-3~20.04.2 amd64 [upgradable from: 2.4.105-3~20.04.1]
+libdrm2/focal-updates 2.4.105-3~20.04.2 amd64 [upgradable from: 2.4.105-3~20.04.1]
+libgcrypt20/focal-updates,focal-security 1.8.5-5ubuntu1.1 amd64 [upgradable from: 1.8.5-5ubuntu1]
+libgl1-mesa-dri/focal-updates 21.0.3-0ubuntu0.3~20.04.5 amd64 [upgradable from: 21.0.3-0ubuntu0.3~20.04.1]
+libglapi-mesa/focal-updates 21.0.3-0ubuntu0.3~20.04.5 amd64 [upgradable from: 21.0.3-0ubuntu0.3~20.04.1]
+libglx-mesa0/focal-updates 21.0.3-0ubuntu0.3~20.04.5 amd64 [upgradable from: 21.0.3-0ubuntu0.3~20.04.1]
+libicu66/focal-updates,focal-security 66.1-2ubuntu2.1 amd64 [upgradable from: 66.1-2ubuntu2]
+libllvm12/focal-updates 1:12.0.0-3ubuntu1~20.04.4 amd64 [upgradable from: 1:12.0.0-3ubuntu1~20.04.3]
+libnetplan0/focal-updates 0.103-0ubuntu5~20.04.5 amd64 [upgradable from: 0.102-0ubuntu1~20.04.2]
+libnss-systemd/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+libnss3/focal-updates,focal-security 2:3.49.1-1ubuntu1.6 amd64 [upgradable from: 2:3.49.1-1ubuntu1.5]
+libntfs-3g883/focal-updates,focal-security 1:2017.3.23AR.3-3ubuntu1.1 amd64 [upgradable from: 1:2017.3.23AR.3-3ubuntu1]
+libpam-modules-bin/focal-updates 1.3.1-5ubuntu4.3 amd64 [upgradable from: 1.3.1-5ubuntu4.2]
+libpam-modules/focal-updates 1.3.1-5ubuntu4.3 amd64 [upgradable from: 1.3.1-5ubuntu4.2]
+libpam-runtime/focal-updates 1.3.1-5ubuntu4.3 all [upgradable from: 1.3.1-5ubuntu4.2]
+libpam-systemd/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+libpam0g/focal-updates 1.3.1-5ubuntu4.3 amd64 [upgradable from: 1.3.1-5ubuntu4.2]
+libprocps8/focal-updates 2:3.3.16-1ubuntu2.3 amd64 [upgradable from: 2:3.3.16-1ubuntu2.2]
+libpulse0/focal-updates 1:13.99.1-1ubuntu3.12 amd64 [upgradable from: 1:13.99.1-1ubuntu3.11]
+libpulsedsp/focal-updates 1:13.99.1-1ubuntu3.12 amd64 [upgradable from: 1:13.99.1-1ubuntu3.11]
+libpython3.8-minimal/focal-updates,focal-security 3.8.10-0ubuntu1~20.04.1 amd64 [upgradable from: 3.8.10-0ubuntu1~20.04]
+libpython3.8-stdlib/focal-updates,focal-security 3.8.10-0ubuntu1~20.04.1 amd64 [upgradable from: 3.8.10-0ubuntu1~20.04]
+libpython3.8/focal-updates,focal-security 3.8.10-0ubuntu1~20.04.1 amd64 [upgradable from: 3.8.10-0ubuntu1~20.04]
+libssh-4/focal-updates,focal-security 0.9.3-2ubuntu2.2 amd64 [upgradable from: 0.9.3-2ubuntu2.1]
+libssl1.1/focal-updates 1.1.1f-1ubuntu2.10 amd64 [upgradable from: 1.1.1f-1ubuntu2.5]
+libsystemd0/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+libtdb1/focal-updates,focal-security 1.4.3-0ubuntu0.20.04.1 amd64 [upgradable from: 1.4.2-3build1]
+libudev1/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+libudisks2-0/focal-updates 2.8.4-1ubuntu2 amd64 [upgradable from: 2.8.4-1ubuntu1]
+linux-base/focal-updates 4.5ubuntu3.7 all [upgradable from: 4.5ubuntu3.6]
+mesa-vulkan-drivers/focal-updates 21.0.3-0ubuntu0.3~20.04.5 amd64 [upgradable from: 21.0.3-0ubuntu0.3~20.04.1]
+netplan.io/focal-updates 0.103-0ubuntu5~20.04.5 amd64 [upgradable from: 0.102-0ubuntu1~20.04.2]
+ntfs-3g/focal-updates,focal-security 1:2017.3.23AR.3-3ubuntu1.1 amd64 [upgradable from: 1:2017.3.23AR.3-3ubuntu1]
+open-vm-tools/focal-updates 2:11.3.0-2ubuntu0~ubuntu20.04.2 amd64 [upgradable from: 2:11.0.5-4]
+openssl/focal-updates 1.1.1f-1ubuntu2.10 amd64 [upgradable from: 1.1.1f-1ubuntu2.5]
+overlayroot/focal-updates 0.45ubuntu2 all [upgradable from: 0.45ubuntu1]
+procps/focal-updates 2:3.3.16-1ubuntu2.3 amd64 [upgradable from: 2:3.3.16-1ubuntu2.2]
+pulseaudio-utils/focal-updates 1:13.99.1-1ubuntu3.12 amd64 [upgradable from: 1:13.99.1-1ubuntu3.11]
+python-apt-common/focal-updates 2.0.0ubuntu0.20.04.6 all [upgradable from: 2.0.0ubuntu0.20.04.5]
+python3-apport/focal-updates,focal-security 2.20.11-0ubuntu27.21 all [upgradable from: 2.20.11-0ubuntu27.18]
+python3-apt/focal-updates 2.0.0ubuntu0.20.04.6 amd64 [upgradable from: 2.0.0ubuntu0.20.04.5]
+python3-problem-report/focal-updates,focal-security 2.20.11-0ubuntu27.21 all [upgradable from: 2.20.11-0ubuntu27.18]
+python3-update-manager/focal-updates 1:20.04.10.9 all [upgradable from: 1:20.04.10.7]
+python3.8-minimal/focal-updates,focal-security 3.8.10-0ubuntu1~20.04.1 amd64 [upgradable from: 3.8.10-0ubuntu1~20.04]
+python3.8/focal-updates,focal-security 3.8.10-0ubuntu1~20.04.1 amd64 [upgradable from: 3.8.10-0ubuntu1~20.04]
+rsync/focal-updates 3.1.3-8ubuntu0.1 amd64 [upgradable from: 3.1.3-8]
+snapd/focal-updates 2.51.1+20.04ubuntu2 amd64 [upgradable from: 2.49.2+20.04]
+squashfs-tools/focal-updates,focal-security 1:4.4-1ubuntu0.3 amd64 [upgradable from: 1:4.4-1]
+systemd-sysv/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+systemd-timesyncd/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+systemd/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+tzdata/focal-updates,focal-security 2021e-0ubuntu0.20.04 all [upgradable from: 2021a-0ubuntu0.20.04]
+ubuntu-advantage-tools/focal-updates 27.4.2~20.04.1 amd64 [upgradable from: 27.2.2~20.04.1]
+udev/focal-updates 245.4-4ubuntu3.13 amd64 [upgradable from: 245.4-4ubuntu3.11]
+udisks2/focal-updates 2.8.4-1ubuntu2 amd64 [upgradable from: 2.8.4-1ubuntu1]
+ufw/focal-updates 0.36-6ubuntu1 all [upgradable from: 0.36-6]
+update-manager-core/focal-updates 1:20.04.10.9 all [upgradable from: 1:20.04.10.7]
+vim-common/focal-updates,focal-security 2:8.1.2269-1ubuntu5.4 all [upgradable from: 2:8.1.2269-1ubuntu5]
+vim-runtime/focal-updates,focal-security 2:8.1.2269-1ubuntu5.4 all [upgradable from: 2:8.1.2269-1ubuntu5]
+vim-tiny/focal-updates,focal-security 2:8.1.2269-1ubuntu5.4 amd64 [upgradable from: 2:8.1.2269-1ubuntu5]
+vim/focal-updates,focal-security 2:8.1.2269-1ubuntu5.4 amd64 [upgradable from: 2:8.1.2269-1ubuntu5]
+wget/focal-updates 1.20.3-1ubuntu2 amd64 [upgradable from: 1.20.3-1ubuntu1]
+xxd/focal-updates,focal-security 2:8.1.2269-1ubuntu5.4 amd64 [upgradable from: 2:8.1.2269-1ubuntu5]
+root@DESKTOP-VS7O4OL:~# nano san.sh
+root@DESKTOP-VS7O4OL:~# ./san.sh 10 12 14 36 45
+-bash: ./san.sh: Permission denied
+root@DESKTOP-VS7O4OL:~# chmod 774 san.sh
+root@DESKTOP-VS7O4OL:~# ./san.sh 10 12 14 36 45
+the script title is ./san.sh
+the first argument is 10
+the second argument is 12
+the third argument is 14
+the fourth argument is 36
+/$ 317 is the PID of the script
+/# the total number of parameters in the script 5
+root@DESKTOP-VS7O4OL:~# nano
+root@DESKTOP-VS7O4OL:~# chmod 774 nani.sh
+root@DESKTOP-VS7O4OL:~# ./nani.sh
+enter a pet animal
+dog
+i love dog
+root@DESKTOP-VS7O4OL:~# ./nani.sh
+enter a pet animal
+cat
+i love cats
+root@DESKTOP-VS7O4OL:~# ./nani.sh
+enter a pet animal
+cow
+i like any animal

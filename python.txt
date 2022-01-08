@@ -1,0 +1,113 @@
+root@DESKTOP-VS7O4OL:~# python3
+Python 3.8.10 (default, Jun  2 2021, 10:49:15)
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 'hello'
+'hello'
+>>> 52+56
+108
+>>> 89-36
+53
+>>> 45//5
+9
+>>> name ='sandhya bathina'
+>>> job ='software'
+>>> print('my name is ' + name + ' working as ' + job)
+my name is sandhya working as software
+>>> n=20
+>>> if(no <10):
+...     print(no, 'is a single digit number')
+... else:
+...     print(no, 'is a multidigit number')
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'no' is not defined
+>>> n=20
+>>> if(n <10):
+...     print(n, 'is a multidigit number')
+... else:
+...     print(n, 'is a single digit number')
+...
+20 is a single digit number
+>>> no=234
+>>> if(no <10):
+...     print(no, 'is a one digit number')
+... elif(no <100):
+...     print(no, 'is a two digit number')
+... elif(no <200):
+...     print(no, 'is a three digit number')
+... elif(no <1000):
+...     print(no, 'is a three digit number')
+... elif(no <10000):
+...     print(no, 'is a four digit number')
+...
+234 is a three digit number
+>>> names =['nivi', 'kivi', 'mivi', 'rivi']
+>>> names[3]
+'rivi'
+>>> print(names[5])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> print(names[2])
+mivi
+>>> for name in names:
+...     print(name)
+...
+nivi
+kivi
+mivi
+rivi
+>>> a,b=0,1
+>>> n=10
+>>> while(a<n):
+...     print(a, end=' ')
+...     a,b=b,a+b
+...
+0 1 1 2 3 5 8 >>> class student:
+...     def setstudent(self,id,name,course);
+  File "<stdin>", line 2
+    def setstudent(self,id,name,course);
+                                       ^
+SyntaxError: invalid syntax
+>>> class student:
+...     def setstudent(self,id,name,course):
+...             self.id=id
+...             self.name=name
+...             self.course=course
+...     def getstudent(self):
+...             print(self.id, " ", self.name, " ", self.course)
+...
+>>> std = student()
+>>> std.setstudent(01,"yashika","devops")
+  File "<stdin>", line 1
+    std.setstudent(01,"yashika","devops")
+                    ^
+SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+>>> std.setstudent(345,"yashika","devops")
+>>> std.getstudent()
+345   yashika   devops
+>>> class item:
+...     def__init__(self,name,price):
+  File "<stdin>", line 2
+    def__init__(self,name,price):
+                                ^
+SyntaxError: invalid syntax
+>>> class item:
+...     def __init__(self,name,price):
+...             self.name=name
+...             self.price=price
+...     def showitem(self):
+...             print(self.name, " ", self.price)
+...
+>>> itm=item()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: __init__() missing 2 required positional arguments: 'name' and 'price'
+>>> itm= item("dairymilk", 500)
+>>> itm.showitem()
+dairymilk   500
+>>> exit
+Use exit() or Ctrl-D (i.e. EOF) to exit
+>>>

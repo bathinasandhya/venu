@@ -1,0 +1,264 @@
+
+ersion: "3.7"
+
+services:
+  app:
+    image: node:12-alpine
+    command: sh -c "yarn install && yarn run dev"
+    ports:
+      -3002:3000
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: todos
+  mysql:
+     image: mysq:5.7
+     volumes:
+       - todo-mysql-data:/var/lib/mysql
+     environnment:
+        MYSQL_ROOT-PASSWORD: secret
+        MYSQL-DATABASE: todos
+volumes:
+      todo-mysql-data:PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -dp 3000:3000 `
+>> -w /app -v "$(pwd):/app" `
+>> --network todo-app `
+>> -e MYSQL_HOST=mysql `
+>> -e MYSQL_USER=root `
+>> -e MYSQL_PASSWORD=secret `
+>> -e MYSQL_DB=todos `
+>> node:12-alpine `
+>> sh -c "yarn install && yarn run dev"
+a269577d52129b75092d8d43ed9dc9cff965ed191b26a07a4e6b833089f271fc
+docker: Error response from daemon: driver failed programming external connectivity on endpoint gifted_stonebraker (425fefb078f28ba3cc345977605439696dfdf7a8c1d81162baa91df33bf497be): Bind for 0.0.0.0:3000 failed: port is already allocated.
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS             PORTS                    NAMES
+17629c84b005   node:12-alpine              "docker-entrypoint.s…"   46 minutes ago      Up 45 minutes      0.0.0.0:3000->3000/tcp   gallant_swartz
+21e63330a8f7   ubuntu                      "bash -c 'shuf -i 1-…"   About an hour ago   Up 55 minutes                               angry_allen
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   About an hour ago   Up About an hour                            modest_wing
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   5 hours ago         Up 5 hours                                  k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           5 hours ago         Up 5 hours                                  k8s_testpod_demo_default_2c0585bd-170c-4ef1-9709-c1c41fd87e3f_5
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker logs -f 17629c84b005
+yarn install v1.22.17
+[1/4] Resolving packages...
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^2.0.0"
+warning Resolution field "ansi-regex@5.0.1" is incompatible with requested version "ansi-regex@^3.0.0"
+success Already up-to-date.
+Done in 128.11s.
+yarn run v1.22.17
+$ nodemon src/index.js
+[nodemon] 2.0.13
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node src/index.js`
+Using sqlite database at /etc/todos/todo.db
+Listening on port 3000
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker network create todo-app
+Error response from daemon: network with name todo-app already exists
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker network create todo1-app
+e842c19f5cfbc0f97f2f22b5c96ead0f982a51a1ddb87f9f6062b6cd48a0e80b
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -d \
+docker: invalid reference format.
+See 'docker run --help'.
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -d `
+>> --network todo1-app --network-alias mysql `
+>> -v todo1-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -d `
+>> --network todo1-app --network-alias mysql `
+>> -v todo1-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Run a command in a new container
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -d `
+>> --network todo1-app --network-alias mysql `
+>> -v todo1-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_DATABASE=todos `
+>> mysql:5.7
+06cb166cf5a58194e42b6e817a69ce2c45fa79cd2efefe00658cf0137cf6e138
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS             PORTS                    NAMES
+06cb166cf5a5   mysql:5.7                   "docker-entrypoint.s…"   2 minutes ago       Up 36 seconds      3306/tcp, 33060/tcp      ecstatic_elion
+17629c84b005   node:12-alpine              "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3000->3000/tcp   gallant_swartz
+21e63330a8f7   ubuntu                      "bash -c 'shuf -i 1-…"   About an hour ago   Up About an hour                            angry_allen
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   2 hours ago         Up 2 hours                                  modest_wing
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   6 hours ago         Up 6 hours                                  k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           6 hours ago         Up 6 hours                                  k8s_testpod_demo_default_2c0585bd-170c-4ef1-9709-c1c41fd87e3f_5
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 06cb166cf5a5 mysql -u root -p
+Enter password:
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 06cb166cf5a5 mysql -u root -p
+Enter password:
+ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 06cb166cf5a5 mysql -u root -p
+Error response from daemon: Container 06cb166cf5a58194e42b6e817a69ce2c45fa79cd2efefe00658cf0137cf6e138 is not running
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -d `
+>> --network todo1-app --network-alias mysql `
+>> -v todo1-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_DATABASE=todo1s `
+>> mysql:5.7
+05e640e478969237330aa0fe5034bf4f8e26f45a61ead90b0dba9c96417ecfe5
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED              STATUS             PORTS                    NAMES
+05e640e47896   mysql:5.7                   "docker-entrypoint.s…"   About a minute ago   Up 33 seconds      3306/tcp, 33060/tcp      inspiring_shaw
+17629c84b005   node:12-alpine              "docker-entrypoint.s…"   About an hour ago    Up About an hour   0.0.0.0:3000->3000/tcp   gallant_swartz
+21e63330a8f7   ubuntu                      "bash -c 'shuf -i 1-…"   2 hours ago          Up About an hour                            angry_allen
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   2 hours ago          Up 2 hours                                  modest_wing
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   6 hours ago          Up 6 hours                                  k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           6 hours ago          Up 6 hours                                  k8s_testpod_demo_default_2c0585bd-170c-4ef1-9709-c1c41fd87e3f_5
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 05e640e47896 mysql -u root -p
+Enter password:
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 05e640e47896 mysql -u root -p
+Enter password:
+ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker network create todo-app
+Error response from daemon: network with name todo-app already exists
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -d `
+>> --network todo1-app --network-alias mysql `
+>> -v todo-mysql-data:/var/lib/mysql `
+>> -e MYSQL_ROOT_PASSWORD=secret `
+>> -e MYSQL_DATABASE=todos `
+>> mysql:5.7
+49083645751f10f201c3505dab24b2a2941eb48fff023f3218017e584fbe8354
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS             PORTS                    NAMES
+49083645751f   mysql:5.7                   "docker-entrypoint.s…"   3 minutes ago       Up 44 seconds      3306/tcp, 33060/tcp      happy_hawking
+05e640e47896   mysql:5.7                   "docker-entrypoint.s…"   11 minutes ago      Up 11 minutes      3306/tcp, 33060/tcp      inspiring_shaw
+17629c84b005   node:12-alpine              "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3000->3000/tcp   gallant_swartz
+21e63330a8f7   ubuntu                      "bash -c 'shuf -i 1-…"   2 hours ago         Up 2 hours                                  angry_allen
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   2 hours ago         Up 2 hours                                  modest_wing
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   6 hours ago         Up 6 hours                                  k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           6 hours ago         Up 6 hours                                  k8s_testpod_demo_default_2c0585bd-170c-4ef1-9709-c1c41fd87e3f_5
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 49083645751f mysql -u root -p
+failed to resize tty, using default size
+                                        ^C
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 49083645751f mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 2
+Server version: 5.7.36 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABASE' at line 1
+mysql> SHOW DATABASE
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABASE' at line 1
+mysql> SHOW DATABASES
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| todos              |
++--------------------+
+5 rows in set (10.97 sec)
+
+mysql> EXIT
+Bye
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -it --network todo-app nicolaka/netshoot
+^C
+
+
+
+
+
+
+^[docker: Error response from daemon: OCI runtime start failed: cannot start a container that has stopped: unknown.
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -it --network todo-app nicolaka/netshoot
+                    dP            dP                           dP
+                    88            88                           88
+88d888b. .d8888b. d8888P .d8888b. 88d888b. .d8888b. .d8888b. d8888P
+88'  `88 88ooood8   88   Y8ooooo. 88'  `88 88'  `88 88'  `88   88
+88    88 88.  ...   88         88 88    88 88.  .88 88.  .88   88
+dP    dP `88888P'   dP   `88888P' dP    dP `88888P' `88888P'   dP
+
+Welcome to Netshoot! (github.com/nicolaka/netshoot)
+
+
+
+
+ 8b121589a93e  ~  dig mysql
+
+; <<>> DiG 9.16.22 <<>> mysql
+;; global options: +cmd
+;; connection timed out; no servers could be reached
+
+
+ 8b121589a93e  ~  exit
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker run -dp 3000:3000 `
+>> -w /app -v "$(pwd):/app" `
+>> --network todo-app `
+>> -e MYSQL_HOST=mysql `
+>> -e MYSQL_USER=root `
+>> -e MYSQL_PASSWORD=secret `
+>> -e MYSQL_DB=todos `
+>> node:12-alpine `
+>> sh -c "yarn install && yarn run dev"
+e7e2baa860a3bb0a35a12bc84d580aae688b0d23a62f4326e003b246a0f038ee
+docker: Error response from daemon: driver failed programming external connectivity on endpoint elated_meninsky (6b853fd36a9c69f2848294fc3598a1c3c5f79588b31f182108d1ba62a76ffa69): Bind for 0.0.0.0:3000 failed: port is already allocated.
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS          PORTS                    NAMES
+49083645751f   mysql:5.7                   "docker-entrypoint.s…"   38 minutes ago   Up 36 minutes   3306/tcp, 33060/tcp      happy_hawking
+05e640e47896   mysql:5.7                   "docker-entrypoint.s…"   47 minutes ago   Up 46 minutes   3306/tcp, 33060/tcp      inspiring_shaw
+17629c84b005   node:12-alpine              "docker-entrypoint.s…"   2 hours ago      Up 2 hours      0.0.0.0:3000->3000/tcp   gallant_swartz
+21e63330a8f7   ubuntu                      "bash -c 'shuf -i 1-…"   2 hours ago      Up 2 hours                               angry_allen
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   3 hours ago      Up 3 hours                               modest_wing
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   6 hours ago      Up 6 hours                               k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           6 hours ago      Up 6 hours                               k8s_testpod_demo_default_2c0585bd-170c-4ef1-9709-c1c41fd87e3f_5
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it ^C
+PS C:\Users\user\Downloads\getting-started-master\getting-started-master> docker exec -it 49083645751f mysql -p todos
+Enter password:
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.36 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> select * from todo_items;
++--------------------------------------+---------+-----------+
+| id                                   | name    | completed |
++--------------------------------------+---------+-----------+
+| b95b0fd9-e6b3-4cbe-b0bd-1d1cbb945485 | yashika |         1 |
+| e817b98c-ee10-48c5-b101-df034b9a65cc | madhuri |         1 |
+| abe2af8c-77d9-474c-9754-beadfb1c5597 | ramya   |         0 |
++--------------------------------------+---------+-----------+
+3 rows in set (1.04 sec)
+
+mysql>

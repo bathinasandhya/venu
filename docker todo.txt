@@ -1,0 +1,158 @@
+# syntax=docker/dockerfile:1
+FROM node:12-alpine
+RUN apk add --no-cache python2 g++ make
+WORKDIR /app
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+PS C:\Users\user\Downloads\getting-started-master> docker build -t getting-started .
+[+] Building 156.5s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                                       17.6s 
+ => => transferring dockerfile: 221B                                                        6.1s 
+ => [internal] load .dockerignore                                                          19.5s 
+ => => transferring context: 374B                                                           6.8s 
+ => [auth] docker/whalesay:pull token for registry-1.docker.io                              0.0s 
+ => [1/2] FROM docker.io/docker/whalesay:latest@sha256:178598e51a26abbc958b8a2e48825c90bc2  1.2s 
+ => CACHED [2/2] RUN apt-get -y update && apt-get install -y fortunes                       0.0s 
+ => exporting to image                                                                      2.8s 
+ => => exporting layers                                                                     0.0s 
+ => => naming to docker.io/library/getting-started                                          0.8s 
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3000:3000 getting-started      
+a769185be290154537625571a48e34bbcc107c4920f4d531d8810091c0fe97af
+PS C:\Users\user\Downloads\getting-started-master> docker image build -t sandy8688/ getting-started .
+invalid argument "sandy8688/" for "-t, --tag" flag: invalid reference format
+See 'docker image build --help'.
+PS C:\Users\user\Downloads\getting-started-master> docker image build -t sandy8688/getting-started .
+[+] Building 22.3s (7/7) FINISHED
+ => [internal] load build definition from Dockerfile                                        3.1s 
+ => => transferring dockerfile: 32B                                                         0.2s 
+ => => transferring context: 35B                                                            0.2s 
+ => [internal] load metadata for docker.io/docker/whalesay:latest                          16.4s 
+ => [auth] docker/whalesay:pull token for registry-1.docker.io                              0.0s 
+ => [1/2] FROM docker.io/docker/whalesay:latest@sha256:178598e51a26abbc958b8a2e48825c90bc2  0.5s 
+ => => resolve docker.io/docker/whalesay:latest@sha256:178598e51a26abbc958b8a2e48825c90bc2  0.5s 
+ => exporting to image                                                                      2.1s 
+ => => exporting layers                                                                     0.0s 
+ => => writing image sha256:0bebabaa012be5116a1ab28b3a82db484de4d7fb59817a2fca728d57bb8e15  0.1s 
+ => => naming to docker.io/sandy8688/getting-started                                        0.1s 
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3001:3001 sany8688/getting-starUnable to find image 'sany8688/getting-started:latest' locally
+docker: Error response from daemon: pull access denied for sany8688/getting-started, repository does not exist or may require 'docker login': denied: requested access to the resource is denied. 
+See 'docker run --help'.
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3001:3000 sany8688/getting_starUnable to find image 'sany8688/getting_started:latest' locally
+oes not exist or may require 'docker login': denied: requested access to the resource is denied. 
+See 'docker run --help'.
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3000:3000 sany8688/getting_started
+Unable to find image 'sany8688/getting_started:latest' locally
+docker: Error response from daemon: pull access denied for sany8688/getting_started, repository does not exist or may require 'docker login': denied: requested access to the resource is denied. 
+See 'docker run --help'.
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3001:3000 sandy8688/getting_started
+ec8eb2ac0f401f8cff34846d01ffafc75287b604ab4b6ff668edb41a490e30dc
+PS C:\Users\user\Downloads\getting-started-master> docker push sandy8688/getting_started
+Using default tag: latest
+The push refers to repository [docker.io/sandy8688/getting_started]
+010921587fcc: Layer already exists 
+fc5c281db457: Layer already exists
+4b592fc579c5: Layer already exists
+bbe9ff7e2dac: Layer already exists 
+c99dbbb91c1e: Layer already exists
+743fabfe0b03: Layer already exists
+529f2cda666c: Layer already exists
+1a058d5342cc: Layer already exists 
+latest: digest: sha256:f61e61178c93cafde6267b97dbb85858f6d2217d21f3afe2d752d29606d2bb3d size: 2000
+PS C:\Users\user\Downloads\getting-started-master> 
+PS C:\Users\user\Downloads\getting-started-master> docker run -d ubuntu bash -c "shuf -i 1-10000 
+-n 1 -o /data.txt && tail -f /dev/null"
+a4041967c6f7015a2660ad8fc7568d803e0a0aee514aa07b02f48d3b73cb1f0d
+CONTAINER ID   IMAGE                       COMMAND                  CREATED              STATUS  
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   About a minute ago   Up 36 seconds                            modest_wing
+nutes   0.0.0.0:3001->3000/tcp   objective_moser
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   4 hours ago          Up 4 hours                               k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           4 hours ago          Up 4 hours                               k8s_testpod_demo_default_2c0585bd-170c-4ef1-9709-c1c41fd87e3f_5 
+PS C:\Users\user\Downloads\getting-started-master> docker exec a4041967c6f7  cat /data.txt       
+6665
+PS C:\Users\user\Downloads\getting-started-master> docker run -it ubuntu ls
+bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
+boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS      
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   5 minutes ago    Up 4 minutes                             modest_wing
+ec8eb2ac0f40   sandy8688/getting_started   "docker-entrypoint.s…"   27 minutes ago   Up 26 minutes   0.0.0.0:3001->3000/tcp   objective_moser
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   4 hours ago      Up 4 hours  
+                             k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           4 hours ago      Up 4 hours  
+PS C:\Users\user\Downloads\getting-started-master> docker rm -f ec8eb2ac0f40  
+ec8eb2ac0f40
+PS C:\Users\user\Downloads\getting-started-master> docker ps
+CONTAINER ID   IMAGE                       COMMAND                  CREATED         STATUS       
+  PORTS     NAMES
+a4041967c6f7   ubuntu                      "bash -c 'shuf -i 1-…"   6 minutes ago   Up 6 minutes 
+            modest_wing
+9ddff74961f9   sandy8688/getting-started   "docker-entrypoint.s…"   4 hours ago     Up 4 hours   
+            k8s_bb-site_bb-demo-775cd74f6f-2tnx6_default_d2175c0a-ab60-4665-b86c-8343f79cdf2b_2  
+ab0889ee3e1f   f80194ae2e0c                "ping 8.8.8.8"           4 hours ago     Up 4 hours   
+            k8s_testpod_demo_default_2c0585bd-170c-4ef1-9709-c1c41fd87e3f_5
+PS C:\Users\user\Downloads\getting-started-master> docker volume created todo1-db
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3001:3000 -v todo1-db:/etc/todos getting-started
+76212d9436ce649afd462ca18289ca7fc01b3a98740e217fed00c6ccb68431e1
+PS C:\Users\user\Downloads\getting-started-master> docker volume created todo-db 
+
+Usage:  docker volume COMMAND
+Manage volumes
+
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3001:3000 -v todo-db:/etc/todos getting-started
+d95ee1bc9c150105450f7a09ec1145959125b3367f100400fd41633883656410
+PS C:\Users\user\Downloads\getting-started-master> docker run -d ubuntu bash -c "shuf -i 1-10000 
+-n 1 -o /data.txt && tail -f /dev/null"
+21e63330a8f7c5f3ae124eedd24fdb494b41aa8e2a69133a339890ccbb305ac9
+PS C:\Users\user\Downloads\getting-started-master> docker volume created todo-db
+
+Usage:  docker volume COMMAND
+Manage volumes
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+Run 'docker volume COMMAND --help' for more information on a command.
+PS C:\Users\user\Downloads\getting-started-master> docker run -dp 3001:3000 -v todo-db:/etc/todos getting-started
+b4f61020687dbba27f33c0c861069f28d5fa8aaf0b2a6802dd9fc1031482e4a8
+PS C:\Users\user\Downloads\getting-started-master> docker volume inspect
+"docker volume inspect" requires at least 1 argument.
+See 'docker volume inspect --help'.
+
+Usage:  docker volume inspect [OPTIONS] VOLUME [VOLUME...]
+
+Display detailed information on one or more volumes
+PS C:\Users\user\Downloads\getting-started-master> docker volume inspect todo-db
+[
+    {
+        "CreatedAt": "2021-12-28T07:21:01Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/todo-db/_data",
+        "Name": "todo-db",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+PS C:\Users\user\Downloads\getting-started-master> 

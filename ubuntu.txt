@@ -1,0 +1,299 @@
+root@DESKTOP-VS7O4OL:~# cd sambi
+root@DESKTOP-VS7O4OL:~/sambi# echo "welcome to devops" > rsd.txt
+root@DESKTOP-VS7O4OL:~/sambi# ls
+rsd.txt
+root@DESKTOP-VS7O4OL:~/sambi# cat rsd.txt
+welcome to devops
+root@DESKTOP-VS7O4OL:~/sambi# echo "welcome to linux commands" >> rsd.txt
+root@DESKTOP-VS7O4OL:~/sambi# cat rsd.txt
+welcome to devops
+welcome to linux commands
+root@DESKTOP-VS7O4OL:~/sambi# cd ..
+root@DESKTOP-VS7O4OL:~# cd sambi
+root@DESKTOP-VS7O4OL:~/sambi# touch ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi# nano ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi# cat ramya.txt
+name:sandhya
+id:206222
+location:kerala
+role: devops sre
+root@DESKTOP-VS7O4OL:~/sambi# cat *.cambo.txt
+cat: '*.cambo.txt': No such file or directory
+root@DESKTOP-VS7O4OL:~/sambi# cat *.txt
+name:sandhya
+id:206222
+location:kerala
+role: devops sre
+welcome to devops
+welcome to linux commands
+root@DESKTOP-VS7O4OL:~/sambi# mkdir -p folderh/infolder
+root@DESKTOP-VS7O4OL:~/sambi# ls
+folderh  ramya.txt  rsd.txt
+root@DESKTOP-VS7O4OL:~/sambi# cd folderh
+root@DESKTOP-VS7O4OL:~/sambi/folderh# ls
+infolder
+root@DESKTOP-VS7O4OL:~/sambi/folderh# cd ..
+root@DESKTOP-VS7O4OL:~/sambi# cd folderh
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "now, we are appending this line" > ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# cat ramya.txt
+now, we are appending this line
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh#
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# echo "welcome to devops" >> ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# cat ramya.txt
+now, we are appending this line
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+root@DESKTOP-VS7O4OL:~/sambi/folderh# less ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# ls -i
+97401 infolder  97402 ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# chmod 774 ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# ls -li
+total 8
+97401 drwxr-xr-x 2 root root 4096 Jan  7 17:11 infolder
+97402 -rwxrwxr-- 1 root root  770 Jan  7 17:30 ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# ls -l
+total 8
+drwxr-xr-x 2 root root 4096 Jan  7 17:11 infolder
+-rwxrwxr-- 1 root root  770 Jan  7 17:30 ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# ls -lh
+total 8.0K
+drwxr-xr-x 2 root root 4.0K Jan  7 17:11 infolder
+-rwxrwxr-- 1 root root  770 Jan  7 17:30 ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# ls -al
+total 16
+drwxr-xr-x 3 root root 4096 Jan  7 17:26 .
+drwxr-xr-x 3 root root 4096 Jan  7 17:11 ..
+drwxr-xr-x 2 root root 4096 Jan  7 17:11 infolder
+-rwxrwxr-- 1 root root  770 Jan  7 17:30 ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# ls
+infolder  ramya.txt
+root@DESKTOP-VS7O4OL:~/sambi/folderh# mv ramya.txt sambi ..
+mv: cannot stat 'sambi': No such file or directory
+root@DESKTOP-VS7O4OL:~/sambi/folderh# cd ..
+root@DESKTOP-VS7O4OL:~/sambi# ls
+folderh  ramya.txt  rsd.txt
+root@DESKTOP-VS7O4OL:~/sambi# cp ramya.txt rsd.txt
+root@DESKTOP-VS7O4OL:~/sambi# ls
+folderh  ramya.txt  rsd.txt
+root@DESKTOP-VS7O4OL:~/sambi# cat rsd.txt
+now, we are appending this line
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+root@DESKTOP-VS7O4OL:~/sambi# mv rmd.txt sanny.txt
+mv: cannot stat 'rmd.txt': No such file or directory
+root@DESKTOP-VS7O4OL:~/sambi# cat sanny.txt
+cat: sanny.txt: No such file or directory
+root@DESKTOP-VS7O4OL:~/sambi# touch sunny.txt
+root@DESKTOP-VS7O4OL:~/sambi# mv rmd.txt sanny.txt
+mv: cannot stat 'rmd.txt': No such file or directory
+root@DESKTOP-VS7O4OL:~/sambi# mv rsd.txt sanny.txt
+root@DESKTOP-VS7O4OL:~/sambi# cat sanny.txt
+now, we are appending this line
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+welcome to devops
+root@DESKTOP-VS7O4OL:~/sambi# cd ..
+root@DESKTOP-VS7O4OL:~# who
+root@DESKTOP-VS7O4OL:~# who am i
+root@DESKTOP-VS7O4OL:~# cd sambi
+root@DESKTOP-VS7O4OL:~/sambi# who am i
+root@DESKTOP-VS7O4OL:~/sambi# whoami
+root
+root@DESKTOP-VS7O4OL:~/sambi# who
+root@DESKTOP-VS7O4OL:~/sambi# passwd
+New password:
+Retype new password:
+passwd: password updated successfully
+root@DESKTOP-VS7O4OL:~/sambi#
+root@DESKTOP-VS7O4OL:~/sambi# passwd
+New password:
+Retype new password:
+passwd: password updated successfully
+root@DESKTOP-VS7O4OL:~/sambi# sudo adduser madhu
+Adding user `madhu' ...
+Adding new group `madhu' (1021) ...
+Adding new user `madhu' (1018) with group `madhu' ...
+Creating home directory `/home/madhu' ...
+Copying files from `/etc/skel' ...
+New password:
+Retype new password:
+passwd: password updated successfully
+Changing the user information for madhu
+Enter the new value, or press ENTER for the default
+        Full Name []:
+        Room Number []:
+        Work Phone []:
+        Home Phone []:
+        Other []:
+Is the information correct? [Y/n] y
+root@DESKTOP-VS7O4OL:~/sambi# su - madhu
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.10.16.3-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Jan  7 17:59:34 IST 2022
+
+  System load:  1.52               Processes:             15
+  Usage of /:   0.7% of 250.98GB   Users logged in:       0
+  Memory usage: 49%                IPv4 address for eth0: 172.25.10.87
+  Swap usage:   4%
+
+
+89 updates can be applied immediately.
+39 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+This message is shown once a day. To disable it please create the
+/home/madhu/.hushlogin file.
+madhu@DESKTOP-VS7O4OL:~$ su -root
+su: invalid option -- 'r'
+Try 'su --help' for more information.
+madhu@DESKTOP-VS7O4OL:~$ su - root
+Password:
